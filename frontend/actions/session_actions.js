@@ -20,7 +20,7 @@ export const logoutCurrentUser = () => {
 
 export const receiveSessionErrors = (errors) => {
     return ({
-      type: RECEIVEERRORS,
+      type: RECEIVESESSIONERRORS,
       errors
     });
 };

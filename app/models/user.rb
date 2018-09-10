@@ -16,7 +16,7 @@ class User < ApplicationRecord
     if BCrypt::Password.new(@user.password_digest).is_password?(password)
       return @user
     else
-      raise ("Invalid username or password!");
+      return false;
     end
   end
 
