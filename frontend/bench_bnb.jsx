@@ -12,7 +12,7 @@ import { fetchBenches } from './actions/bench_actions';
 // window.login = login;
 // window.logout = logout;
 window.fetchBenches = fetchBenches; // tested
-// window.fetchBenches = fetchBenches; // tested
+window.fetchBenches = fetchBenches; // tested
 
 
 
