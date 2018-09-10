@@ -6,13 +6,13 @@ import Root from './components/root.jsx';
 import configureStore from './store/store.js';
 
 // import { receiveCurrentUser, logoutCurrentUser, login, logout, signup } from './actions/session_actions';
-import { fetchBenches } from './actions/bench_actions';
-// import { fetchBenches } from './util/bench_api_util';
+// import { fetchBenches } from './actions/bench_actions';
+import { fetchBenches } from './util/bench_api_util';
 // window.signup = signup;
 // window.login = login;
 // window.logout = logout;
 window.fetchBenches = fetchBenches; // tested
-window.fetchBenches = fetchBenches; // tested
+// window.fetchBenches = fetchBenches; // tested
 
 
 

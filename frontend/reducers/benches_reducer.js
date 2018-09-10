@@ -4,7 +4,7 @@ import { merge } from 'lodash';
 function benchesReducer (state = {}, action) {
   switch (action.type) {
     case RECEIVE_ALL_BENCHES:
-      return merge({}, state, action.benches);
+      return action.benches;
     default:
       return state;
   }
