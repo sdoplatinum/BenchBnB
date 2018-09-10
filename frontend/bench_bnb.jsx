@@ -9,13 +9,30 @@ window.signup = signup;
 window.login = login;
 window.logout = logout;
 
-const store = configureStore();
 
-window.getState = store.getState;
-window.dispatch = store.dispatch;
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  let store;
+
+  if (Boolean(window.currentUser)) {
+    const preLoadedState = {
+      entities: {
+        users: {[window.currentUser.id]: window.currentUser}
+      },
+      session: {currentUserId: window.currentUser.id}
+    };
+    store = configureStore(preLoadedState);
+  } else {
+    store = configureStore();
+  }
+
+  // TESTING
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // TESTING
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
+
 });

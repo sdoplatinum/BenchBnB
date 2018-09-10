@@ -4,11 +4,11 @@ function sessionsReducer(state = { current_user_id: null }, action) {
   switch (action.type) {
     case RECEIVECURRENTUSER:
       return {
-        current_user_id: action.user.id,
+        currentUserId: action.user.id,
       };
     case LOGOUTCURRENTUSER:
       return {
-        current_user_id: null,
+        currentUserId: null,
       };
     default:
       return state;

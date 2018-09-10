@@ -7,6 +7,7 @@ export const createUser = (user) => {
 };
 
 export const loginUser = (user) => {
+  debugger
   return $.ajax({
       method: 'POST',
       url: '/api/session',
@@ -15,6 +16,7 @@ export const loginUser = (user) => {
 };
 
 export const logoutUser = () => {
+  debugger
   return $.ajax({
        method: 'DELETE',
        url: '/api/session'
